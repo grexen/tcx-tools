@@ -27,7 +27,7 @@ for activity in activities:
     activity.set_distance(distanceGap)
     distanceGap = activity.get_last_distance()
 
-templateRoot = etree.parse('template.tcx')
+templateRoot = etree.parse(fs.get_template_path('template.tcx'))
 templateActivity = templateRoot.getroot()[0][0]
 templateActivity.append(activities[0].get_id_node())
 

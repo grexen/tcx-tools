@@ -40,3 +40,7 @@ def check_user_input_dir(input_dir):
         get_input_dir()
     else:
         print("Directory is valid - proceeding...")
+
+
+def get_template_path(template_name):
+    return os.path.join(os.path.dirname(__file__), template_name)
